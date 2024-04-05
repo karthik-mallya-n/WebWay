@@ -1,9 +1,9 @@
 import Link from "next/link";
 // import { Home } from "lucide-react";
 import Image from "next/image";
-import AuthButton from "../auth/auth-button";
 import { buttonVariants } from "../ui/button";
 import MaxWidthWrapper from "./max-width-wrapper";
+import AuthButton from "../auth/authButton";
 
 export function Navbar() {
   return (
@@ -13,7 +13,7 @@ export function Navbar() {
           <div className="flex h-16 items-center justify-between border-b border-zinc-200">
             <Link href="/" className="z-40 flex font-semibold">
               <div className="flex h-14 items-center justify-between gap-5">
-                <Image src="/logo.png" alt="CSI Logo" width={30} height={30} />
+                <Image src="/logo.png" alt="logo" width={30} height={30} />
                 <span className="text-pink-600 ">WebWay.</span>
               </div>
             </Link>

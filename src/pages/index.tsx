@@ -9,8 +9,7 @@ export default function Home() {
         <link rel="icon" href="/logo.ico" />
       </Head>
       <main>
-        <hr className="border-black-500/50" />
-        <hr className="border-black-500/50" />
+      <>hello</>
       </main>
     </>
   );

@@ -1,5 +1,4 @@
 import { signIn, signOut, useSession } from "next-auth/react";
-import { Button } from "../ui/button";
 import { DoorClosed, DoorOpen } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,6 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
+import { Button } from "../ui/button";
 export default function AuthButton() {
   const { data: session } = useSession();
   const user = session?.user;
