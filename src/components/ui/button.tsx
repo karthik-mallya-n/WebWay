@@ -15,10 +15,10 @@ const buttonVariants = cva(
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         secondary:
-          "border-2 border-pink-600 text-secondary-foreground hover:bg-pink-600 hover:text-white",
+          "border-2 border-[#5b6d42] text-secondary-foreground hover:bg-[#5b6d42] hover:text-white",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        pink: "bg-pink-600 text-primary-foreground rounded-full hover:bg-pink-600/90",
+        green: "bg-[#5b6d42] text-primary-foreground rounded-full hover:bg-[#5b6d42]/90",
       },
       size: {
         default: "h-10 px-4 py-2",

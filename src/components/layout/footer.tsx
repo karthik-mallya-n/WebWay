@@ -15,14 +15,14 @@ const social = [
   {
     link: "https://www.instagram.com/dhanushlnaik",
     icon: (
-      <InstagramLogoIcon className="duration-200 hover:scale-125 hover:text-pink-500" />
+      <InstagramLogoIcon className="duration-200 hover:scale-125 hover:text-[#5b6d42]" />
     ),
     name: "Instagram",
   },
   {
     link: "https://twitter.com/dhanushlnaik",
     icon: (
-      <TwitterLogoIcon className="duration-200 hover:scale-125 hover:text-pink-500" />
+      <TwitterLogoIcon className="duration-200 hover:scale-125 hover:text-[#5b6d42]" />
     ),
     name: "Twitter",
   },
@@ -57,7 +57,7 @@ const Footer = () => {
         />
       </div>
 
-      <a className="ml-3 mt-5 flex cursor-pointer items-center justify-center text-center text-lg font-bold text-pink-600 dark:text-gray-100 md:text-xl">
+      <a className="ml-3 mt-5 flex cursor-pointer items-center justify-center text-center text-lg font-bold text-[#5b6d42] dark:text-gray-100 md:text-xl">
         WebWay INC.
       </a>
 
@@ -72,7 +72,7 @@ const Footer = () => {
             <li key={index}>
               <Link
                 href={link.link}
-                className="text-black transition hover:text-pink-500 dark:text-gray-100 dark:hover:text-gray-200/75"
+                className="text-black transition hover:text-[#5b6d42] dark:text-gray-100 dark:hover:text-gray-200/75"
               >
                 {link.name}
               </Link>

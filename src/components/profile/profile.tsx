@@ -55,7 +55,7 @@ export default function Profile() {
 
                             <div className="pt-3">
                               <h1
-                                className={`bg-gradient-to-b from-pink-600 to-violet-400 bg-clip-text pb-4 text-center text-4xl font-black text-transparent`}
+                                className={`bg-gradient-to-b from-[#5b6d42] to-violet-400 bg-clip-text pb-4 text-center text-4xl font-black text-transparent`}
                               >
                                 {user.name}
                               </h1>
@@ -88,7 +88,7 @@ export default function Profile() {
                                   variant: "outline",
                                   size: "icon",
                                   className:
-                                    "rounded-full transition-colors hover:text-pink-500",
+                                    "rounded-full transition-colors hover:text-[#5b6d42]",
                                 })}
                                 href={"/"}
                                 target="_blank"

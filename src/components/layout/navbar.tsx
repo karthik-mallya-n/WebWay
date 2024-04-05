@@ -14,7 +14,7 @@ export function Navbar() {
             <Link href="/" className="z-40 flex font-semibold">
               <div className="flex h-14 items-center justify-between gap-5">
                 <Image src="/logo.png" alt="logo" width={30} height={30} />
-                <span className="text-pink-600 ">WebWay.</span>
+                <span className="text-[#5b6d42] ">WebWay.</span>
               </div>
             </Link>
             <div className="hidden items-center space-x-4 sm:flex">
@@ -48,7 +48,7 @@ export function Navbar() {
               <Link
                 href="/team"
                 className={buttonVariants({
-                  variant: "pink",
+                  variant: "green",
                   size: "sm",
                 })}
               >
