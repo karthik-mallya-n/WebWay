@@ -12,8 +12,8 @@ export function Navbar() {
         <MaxWidthWrapper>
           <div className="flex h-16 items-center justify-between border-b border-zinc-200">
             <Link href="/" className="z-40 flex font-semibold">
-              <div className="flex h-14 items-center justify-between gap-5">
-                <Image src="/logo.png" alt="logo" width={30} height={30} />
+              <div className="flex h-14 items-center justify-between gap-2">
+                <Image src="/logo.png" alt="logo" width={50} height={50} />
                 <span className="text-[#5b6d42] ">WebWay.</span>
               </div>
             </Link>
@@ -21,7 +21,7 @@ export function Navbar() {
               <Link
                 href="/dashboard"
                 className={buttonVariants({
-                  variant: "ghost",
+                  variant: "mine",
                   size: "sm",
                 })}
               >
@@ -30,7 +30,7 @@ export function Navbar() {
               <Link
                 href="/events"
                 className={buttonVariants({
-                  variant: "ghost",
+                  variant: "mine",
                   size: "sm",
                 })}
               >
@@ -39,21 +39,13 @@ export function Navbar() {
               <Link
                 href="/team"
                 className={buttonVariants({
-                  variant: "ghost",
+                  variant: "mine",
                   size: "sm",
                 })}
               >
                 Contact Us
               </Link>
-              <Link
-                href="/team"
-                className={buttonVariants({
-                  variant: "green",
-                  size: "sm",
-                })}
-              >
-                Donate
-              </Link>
+             
               <AuthButton />
             </div>
           </div>

@@ -7,6 +7,7 @@ import "~/styles/globals.css";
 import { Navbar } from "~/components/layout/navbar";
 import Footer from "~/components/layout/footer";
 import "~/styles/globals.css";
+import LandingText from "~/components/layout/landingtext";
 
 
 const poppins = Poppins({
@@ -24,6 +25,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
     <SessionProvider session={session}>
       <main className={`${poppins.className}`}>
         <Navbar />
+        <LandingText />
         <Component {...pageProps} />
         <Footer />
       </main>
