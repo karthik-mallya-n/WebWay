@@ -14,17 +14,6 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Post {
-    id        Int      @id @default(autoincrement())
-    name      String
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-
-    createdBy   User   @relation(fields: [createdById], references: [id])
-    createdById String
-
-    @@index([name])
-}
 
 // Necessary for Next auth
 model Account {
@@ -61,7 +50,6 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
-    posts         Post[]
 }
 
 model VerificationToken {
@@ -70,4 +58,60 @@ model VerificationToken {
     expires    DateTime
 
     @@unique([identifier, token])
+}
+
+model Delivery {
+  id        String  @id @default(cuid())
+  sender    Account  @relation(fields: [senderId], references: [id], name: "sentBy")
+  senderId  String
+  receiver  Account  @relation(fields: [receiverId], references: [id], name: "sentTo")
+  receiverId String
+  plan      Plan     @default(STANDARD)
+  status    DeliveryStatus
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+
+  // One-to-One relation with DeliveryQRCode (sender's QR)
+  senderQRCode DeliveryQRCode?  @relation(fields: [senderQrCodeId], references: [id], name: "senderQR")
+  senderQrCodeId String?
+
+  // One-to-One relation with DeliveryQRCode (recipient's QR)
+  recipientQRCode DeliveryQRCode? @relation(fields: [recipientQrCodeId], references: [id], name: "receiverQR")
+  recipientQrCodeId String?
+
+  // One-to-One relation with DeliveryQRCode (delivery guy 1 QR, for express plan)
+  deliveryGuy1QRCode DeliveryQRCode? @relation(fields: [deliveryGuy1QrCodeId], references: [id] )
+  deliveryGuy1QrCodeId String?
+
+  // One-to-One relation with DeliveryQRCode (delivery guy 2 QR, for express plan)
+  deliveryGuy2QRCode DeliveryQRCode? @relation(fields: [deliveryGuy2QrCodeId], references: [id])
+  deliveryGuy2QrCodeId String?
+}
+
+enum Plan {
+  STANDARD
+  EXPRESS
+}
+
+enum DeliveryStatus {
+  PENDING
+  IN_PROGRESS
+  DELIVERED
+}
+
+model DeliveryQRCode {
+  id          String  @id @default(cuid())
+  delivery    Delivery  @relation(fields: [deliveryId], references: [id])
+  deliveryId  String
+  data        Json
+  status      QRCodeStatus  @default(ACTIVE)
+  scanCount   Int          @default(0)
+  scannedBy   Account?    @relation(fields: [scannedByAccountId], references: [id])
+  scannedByAccountId String?
+  createdAt  DateTime @default(now())
+}
+
+enum QRCodeStatus {
+  ACTIVE
+  INACTIVE
 }
