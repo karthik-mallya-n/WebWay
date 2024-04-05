@@ -25,7 +25,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
     <SessionProvider session={session}>
       <main className={`${poppins.className}`}>
         <Navbar />
-        <LandingText />
+        
         <Component {...pageProps} />
         <Footer />
       </main>
