@@ -7,7 +7,7 @@ import {
 } from "~/server/api/trpc";
 
 export const accountRouter = createTRPCRouter({
-  getAll: publicProcedure
+  getOne: publicProcedure
     .input(z.object({ where: z.object({ id: z.string() }) }))
     .query(({ ctx, input }) => {
       const { id } = input.where;
