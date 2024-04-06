@@ -45,7 +45,7 @@ export function Navbar() {
               >
                 Contact Us
               </Link>
-             
+
               <AuthButton />
             </div>
           </div>
