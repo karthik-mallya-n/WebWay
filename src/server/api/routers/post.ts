@@ -7,12 +7,11 @@ import {
 } from "~/server/api/trpc";
 
 export const postRouter = createTRPCRouter({
-  hello: publicProcedure
-    .query(() => {
-      return {
-        greeting: `Hello`,
-      };
-    }),
+  hello: publicProcedure.query(() => {
+    return {
+      greeting: `Hello`,
+    };
+  }),
 
   // create: protectedProcedure
   //   .input(z.object({ name: z.string().min(1) }))
@@ -35,7 +34,7 @@ export const postRouter = createTRPCRouter({
   //   });
   // }),
 
-  getSecretMessage: protectedProcedure.query(() => {
+  getSecretMessage: publicProcedure.query(() => {
     return "you can now see this secret message!";
   }),
 });
