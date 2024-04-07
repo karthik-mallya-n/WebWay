@@ -20,6 +20,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useStateStore } from "~/store";
 import { useToast } from "~/components/ui/use-toast"
+import Link from "next/link";
 
 
 enum Plan {
@@ -332,10 +333,11 @@ export default function Standard() {
                 </FormItem>
               )}
             />
-
+              <Link href='/bus'>
             <Button type="submit" style={{ padding: "10px" }}>
               {"Submit"}
             </Button>
+            </Link>
           </form>
         </Form>
       </div>
