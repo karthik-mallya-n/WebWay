@@ -333,7 +333,7 @@ export default function Standard() {
                 </FormItem>
               )}
             />
-              <Link href='/bus'>
+              <Link href='/busses'>
             <Button type="submit" style={{ padding: "10px" }}>
               {"Submit"}
             </Button>
