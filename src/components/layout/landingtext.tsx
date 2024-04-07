@@ -55,7 +55,7 @@ const LandingText: React.FC = () => {
                                 Get Started
                             </Link>
                             <Link
-                                href="/main"
+                                href="/bus/id"
                                 className={buttonVariants({
                                     variant: "bodblue",
                                     size: "lg",

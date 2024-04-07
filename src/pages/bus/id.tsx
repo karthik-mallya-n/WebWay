@@ -1,3 +1,4 @@
+import Link from "next/link"
 import * as React from "react"
 
 import { Button } from "~/components/ui/button"
@@ -40,7 +41,7 @@ export default function CardWithForm() {
       </CardContent>
       <CardFooter className="flex justify-between">
         <Button variant="outline">Cancel</Button>
-        <Button>Track</Button>
+        <Link href='/map'><Button>Track</Button></Link>
       </CardFooter>
     </Card>
    </div>

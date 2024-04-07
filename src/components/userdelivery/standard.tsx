@@ -294,7 +294,7 @@ export default function Standard() {
               name="toPlace"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>frm</FormLabel>
+                  <FormLabel>from</FormLabel>
                   <FormControl>
                     <select
                       {...field}
