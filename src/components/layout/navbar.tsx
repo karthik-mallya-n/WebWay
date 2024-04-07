@@ -22,7 +22,7 @@ export function Navbar() {
             </Link>
             <div className="hidden items-center space-x-4 sm:flex">
               <Link
-                href="/dashboard"
+                href="/"
                 className={buttonVariants({
                   variant: "hovblue",
                   size: "sm",
@@ -31,7 +31,7 @@ export function Navbar() {
                 Home
               </Link>
               <Link
-                href="/events"
+                href="/about"
                 className={buttonVariants({
                   variant: "hovblue",
                   size: "sm",
@@ -40,7 +40,7 @@ export function Navbar() {
                 About 
               </Link>
               <Link
-                href="/team"
+                href="/contact"
                 className={buttonVariants({
                   variant: "hovblue",
                   size: "sm",

@@ -24,8 +24,10 @@ const MyApp: AppType<{ session: Session | null }> = ({
       <main className={`${poppins.className}`}>
         <Navbar />
         <Component {...pageProps} />
-        <Footer />
+     
       </main>
+      <Footer />
+     
     </SessionProvider>
   );
 };

@@ -42,16 +42,29 @@ const LandingText: React.FC = () => {
                             <p className="mt-8 mb-3 text-md text-white dark:text-white">
                                 WebWay empowers you to send packages, gifts and many more within your region quickly, conveniently, and affordably.We offer a faster and more cost-effective alternative to traditional courier services.  Schedule deliveries online, track your package, and enjoy a hassle-free experience.
                             </p>
+                            <div className="but flex justify-start w-[400px]  h-[100px] items-center z-20">
                             <Link
                                 href="/main"
                                 className={buttonVariants({
                                     variant: "bodblue",
                                     size: "lg",
                                 })}
-                                style={{ zIndex: 10,marginLeft:'-370px' ,marginBottom:'20 px'}}
+                                style={{ marginRight: "20px" }}
+                               
                             >
                                 Get Started
                             </Link>
+                            <Link
+                                href="/main"
+                                className={buttonVariants({
+                                    variant: "bodblue",
+                                    size: "lg",
+                                })}
+                                
+                            >
+                                Track
+                            </Link>
+                            </div>
                         </div>
 
                     </div>
